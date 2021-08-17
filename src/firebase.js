@@ -1,12 +1,19 @@
 import firebase from "firebase/app";
+import config from "./config.json";
+import "firebase/auth";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyC8QNahgtQ8NGXXjG8HfA1AoIgct_JqXRI",
-    authDomain: "reels-app-47341.firebaseapp.com",
-    projectId: "reels-app-47341",
-    storageBucket: "reels-app-47341.appspot.com",
-    messagingSenderId: "220959761959",
-    appId: "1:220959761959:web:eb451630da993dff739002"
+import "firebase/firestore";
+
+firebase.initializeApp(config);
+
+let provider = new firebase.auth.GoogleAuthProvider();
+
+export const auth = firebase.auth();
+
+export const signInWithGoogle = () => {
+    
+    auth.signInWithPopup(provider);
+    
 };
 
-firebase.initializeApp(firebaseConfig);
+export default firebase;
