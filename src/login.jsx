@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
-import { signInWithGoogle, auth } from "./firebase";
+import { useContext } from "react";
+import { signInWithGoogle } from "./firebase";
 import { authContext } from "./AuthProvider";
 import { Redirect } from "react-router-dom";
 let Login = () => {

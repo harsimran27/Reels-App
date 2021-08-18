@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./home";
 import Login from "./login";
 import AuthProvider from "./AuthProvider";
+// import { firestore } from "./firebase";
 let App = () => {
+
   return (
     <>
       <AuthProvider>
