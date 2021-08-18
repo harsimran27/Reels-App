@@ -1,15 +1,13 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { signInWithGoogle, auth } from "./firebase";
-
+import { authContext } from "./AuthProvider";
+import { Redirect } from "react-router-dom";
 let Login = () => {
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      console.log(user);
-    });
-  }, []);
+  let user = useContext(authContext);
 
   return (
     <>
+      {user ? <Redirect to="/" /> : ""}
       <button
         onClick={() => {
           signInWithGoogle();
@@ -17,14 +15,6 @@ let Login = () => {
         className="btn btn-primary m-4"
       >
         Login with google
-      </button>
-
-      <button
-        onClick={() => {
-          auth.signOut();
-        }}
-      >
-        lOGOUT
       </button>
     </>
   );
