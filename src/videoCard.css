@@ -1,0 +1,51 @@
+.video-card {
+  height: 100vh;
+  width: 35%;
+  border: 1px solid white;
+  margin: auto;
+  position: relative;
+}
+
+.video-card-username {
+  position: absolute;
+  bottom: 10rem;
+  left: 1rem;
+  color: white;
+}
+
+.video-card-music {
+  position: absolute;
+  display: flex;
+  color: white;
+  bottom: 8rem;
+  left: 0.7rem;
+  width: 50%;
+  align-items: center;
+}
+
+.video-card-music span {
+  font-size: 1.2rem;
+}
+
+.video-card-music marquee {
+  font-size: 0.9rem;
+  color: rgb(121, 121, 121);
+  position: relative;
+  left: -0.7rem;
+}
+
+.video-card-comment {
+  position: absolute;
+  right: 1rem;
+  bottom: 14rem;
+  color: rgb(100, 100, 100);
+  font-size: 1.7rem;
+}
+
+.video-card-like {
+  position: absolute;
+  bottom: 11.5rem;
+  right: 1rem;
+  color: darkred;
+  font-size: 1.8rem;
+}

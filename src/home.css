@@ -1,0 +1,24 @@
+.home-logout-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  color: rgb();
+  color: #c7c7c7;
+  background-color: #5d5d5d;
+}
+
+.home-logout-btn:hover {
+  transform: scale(0.98);
+}
+
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: black;
+  scroll-snap-type: mandatory;
+}
