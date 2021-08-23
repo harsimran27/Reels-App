@@ -69,3 +69,59 @@
   background-color: white;
   z-index: 2;
 }
+
+.comment-form {
+  position: absolute;
+  bottom: 4px;
+  height: 10%;
+  display: flex;
+  width: 100%;
+}
+
+.comment-form input {
+  width: 85%;
+  height: 100%;
+}
+
+.comment-form button {
+  width: 15%;
+  height: 100%;
+  border: none;
+  color: white;
+  background-color: #2980b9;
+}
+
+.actual-comments {
+  height: 90%;
+}
+
+.post-user-comment {
+  align-items: center;
+  display: flex;
+}
+
+.post-user-comment h5 {
+  font-size: 1.1rem;
+}
+
+.post-user-comment p {
+  font-size: 0.9rem;
+}
+
+.post-user-comment img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.post-user-comment div {
+  margin-top: 4px;
+}
+
+.post-user-comment img {
+  margin-left: 10px;
+}
+
+.post-user-comment div {
+  margin-left: 20px;
+}
