@@ -31,3 +31,14 @@ body {
   background-color: black;
   scroll-snap-type: mandatory;
 }
+
+.upload-file-btn {
+  width: 6rem;
+  position: absolute;
+  bottom: 8rem;
+  right: 3rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
