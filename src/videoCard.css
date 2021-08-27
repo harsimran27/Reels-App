@@ -1,16 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .video-card {
-  height: 100vh;
+  height: 100%;
   width: 35%;
-  border: 1px solid white;
   margin: auto;
+  scroll-snap-align: start;
   position: relative;
 }
 
