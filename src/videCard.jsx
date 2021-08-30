@@ -10,6 +10,11 @@ let VideoCard = (props) => {
   let [comments, setComments] = useState([]);
   let user = useContext(authContext);
 
+  let currUserLiked;
+  if (user) {
+    currUserLiked = props.data.likes.includes(user.uid);
+  }
+
   useEffect(() => {
     let f = async () => {
       let commentsArr = props.data.comments;
@@ -51,7 +56,7 @@ let VideoCard = (props) => {
             {comments.map((el) => {
               return (
                 <div className="post-user-comment">
-                  <img src={el.photo} alt=""/>
+                  <img src={el.photo} alt="" />
                   <div>
                     <h5>{el.name}</h5>
                     <p>{el.comment}</p>
@@ -120,8 +125,22 @@ let VideoCard = (props) => {
       >
         chat
       </span>
-      <span className="material-icons-outlined video-card-like">
-        favorite_border
+      <span
+        className="material-icons-outlined video-card-like"
+        onClick={() => {
+          let likesArr = props.data.likes;
+          if (currUserLiked) {
+            likesArr = likesArr.filter((el) => el != user.uid);
+          } else {
+            likesArr.push(user.uid);
+          }
+          firestore
+            .collection("posts")
+            .doc(props.data.id)
+            .update({ likes: likesArr });
+        }}
+      >
+        {currUserLiked ? "favorite" : "favorite_border"}
       </span>
     </div>
   );
